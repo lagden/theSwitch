@@ -27,12 +27,12 @@
 
     Plugin.prototype = {
         init: function() {
-            if (this.$element.is(':checkbox'))
+            if (this.$element.is(":checkbox"))
                 this.custom();
         },
         custom: function() {
             // Create the custom element
-            var span = doc.createElement('span');
+            var span = doc.createElement("span");
             span.className = this.element.className;
             this.$span = $(span);
             if(this.opts.theCss)
@@ -47,14 +47,14 @@
                     "position": "absolute",
                     "width": "100%"
                 })
-                .on('click.' + this._name, {"that": this}, _onClick)
+                .on("click." + this._name, {"that": this}, _onClick)
                 .after(this.$span)
                 .appendTo(this.$span);
 
             // Listener Form Reset
-            var frm = this.$element.parents('form:eq(0)');
+            var frm = this.$element.parents("form:eq(0)");
             if (frm.length === 1)
-                frm.on('reset', {"that": this}, _onReset);
+                frm.on("reset", {"that": this}, _onReset);
 
             // Verify initial status
             _onClick({"data": {"that": this}});
@@ -65,32 +65,32 @@
     function _onReset(e) {
         var that = e.data.that;
         that.element.checked = true;
-        that.$span.removeClass('checked');
+        that.$span.removeClass("checked");
     }
 
     function _onClick(e) {
         var that = e.data.that;
         if (that.element.checked)
-            that.$span.addClass('checked');
+            that.$span.addClass("checked");
         else
-            that.$span.removeClass('checked');
+            that.$span.removeClass("checked");
     }
 
     $.fn[pluginName] = function(options) {
         var args = arguments;
-        var hasWebkit = Boolean(navigator.userAgent.indexOf('WebKit') > -1);
+        var hasWebkit = Boolean(navigator.userAgent.indexOf("WebKit") > -1);
         if (hasWebkit === false) {
-            if (options === undefined || typeof options === 'object') {
+            if (options === undefined || typeof options === "object") {
                 return this.each(function() {
                     if (!$.data(this, pluginName))
                         $.data(this, pluginName, new Plugin(this, options));
                 });
-            } else if (typeof options === 'string' && options[0] !== '_' && options !== 'init') {
+            } else if (typeof options === "string" && options[0] !== "_" && options !== "init") {
                 var returns;
 
                 this.each(function() {
                     var instance = $.data(this, pluginName);
-                    if (instance instanceof Plugin && typeof instance[options] === 'function')
+                    if (instance instanceof Plugin && typeof instance[options] === "function")
                         returns = instance[options].apply(instance, Array.prototype.slice.call(args, 1));
                 });
 
