@@ -17,12 +17,11 @@ The component can be used as a Common JS module, an AMD module, or a global.
 
 ## Contributors
 
-    project  : theCombo
-    repo age : 5 months
-    active   : 12 days
-    commits  : 28
-    files    : 8
+    project  : theSwitch
+    repo age : 48 seconds
+    active   : 1 days
+    commits  : 1
+    files    : 10
     authors  :
-       27  Thiago Lagden           96.4%
-        1  Ofelquis Gimenes        3.6%
+        1  Thiago Lagden           100.0%
 
