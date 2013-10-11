@@ -1,0 +1,19 @@
+node_modules
+bower_components
+.sass-cache
+
+# Craps
+.DS_Store
+thumbs.db
+.*.swp
+*.tmproj
+*.mwb
+*.mwb.bak
+*.sublime-*
+.arch-params
+.bzr
+_darcs
+.hg
+.monotone
+.svn
+.project
