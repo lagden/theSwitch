@@ -47,10 +47,7 @@
                     "position": "absolute",
                     "width": "100%"
                 })
-                .on('click.' + this._name, {"that": this}, _onClick);
-
-            // Add Element
-            this.$element
+                .on('click.' + this._name, {"that": this}, _onClick)
                 .after(this.$span)
                 .appendTo(this.$span);
 
