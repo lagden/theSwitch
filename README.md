@@ -3,7 +3,7 @@
 jQuery plugin for **customize** the `<input:checkbox>` tag.
 If you are using a Webkit browser, the plugin will not initialize, because doesn't need this.
 
-[See example!!!](https://github.com/lagden/theSwitch/tree/master/example)
+[See example!!!](https://lagden.github.io/theSwitch)
 
 ## Installation
 
