@@ -31,12 +31,14 @@
                 this.custom();
         },
         custom: function() {
+            // Create the custom element
             var span = doc.createElement('span');
             span.className = this.element.className;
             this.$span = $(span);
             if(this.opts.theCss)
                 this.$span.addClass(this.opts.theCss);
 
+            // Some style and listener click
             this.$element
                 .css({
                     "top": 0,
@@ -45,26 +47,31 @@
                     "position": "absolute",
                     "width": "100%"
                 })
-                .on('click.' + this._name, {"that": this}, _click);
+                .on('click.' + this._name, {"that": this}, _onClick);
 
+            // Add Element
             this.$element
                 .after(this.$span)
                 .appendTo(this.$span);
 
+            // Listener Form Reset
             var frm = this.$element.parents('form:eq(0)');
             if (frm.length === 1)
-                frm.on('reset', {"that": this}, _reset);
+                frm.on('reset', {"that": this}, _onReset);
+
+            // Verify initial status
+            _onClick({"data": {"that": this}});
         }
     };
 
     // Private methods
-    function _reset(e) {
+    function _onReset(e) {
         var that = e.data.that;
         that.element.checked = true;
         that.$span.removeClass('checked');
     }
 
-    function _click(e) {
+    function _onClick(e) {
         var that = e.data.that;
         if (that.element.checked)
             that.$span.addClass('checked');
