@@ -18,10 +18,10 @@ The component can be used as a Common JS module, an AMD module, or a global.
 ## Contributors
 
     project  : theSwitch
-    repo age : 48 seconds
+    repo age : 58 minutes
     active   : 1 days
-    commits  : 1
+    commits  : 6
     files    : 10
     authors  :
-        1  Thiago Lagden           100.0%
+        6  Thiago Lagden           100.0%
 
