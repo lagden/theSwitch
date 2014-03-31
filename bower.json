@@ -1,7 +1,7 @@
 {
   "name": "jquery.theSwitch.js",
   "description": "Customize the <input:checkbox> tag",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Thiago Lagden",
   "main": [
     "jquery.theSwitch.js",
@@ -13,9 +13,16 @@
     "checkbox"
   ],
   "ignore": [
-    "example",
     ".sass-cache",
-    "sass"
+    ".bowerrc",
+    ".git",
+    ".gitignore",
+    "config.rb",
+    "bower.json",
+    "package.json",
+    "README.md",
+    "sass",
+    "example"
   ],
   "devDependencies": {
     "jquery": ">=1.7"

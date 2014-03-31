@@ -1,0 +1,6 @@
+{
+    "volo": {
+        "url": "https://raw.githubusercontent.com/lagden/theSwitch/{version}/jquery.theSwitch.js"
+    },
+    "main": "jquery.theSwitch.js"
+}
