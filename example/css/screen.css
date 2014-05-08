@@ -17,7 +17,5 @@ body{
 label{
     vertical-align: middle;
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
     font-weight: bold;
 }
